@@ -24,13 +24,13 @@ for c in result:
         c = " "
     pyautogui.typewrite(c, t)
 
-# while (time.time() - start) < pause:
-#     screenshot = pyautogui.screenshot(region=(450, 280, 980, 70))
-#     screenshot.save("test1.png")
-#     img = cv2.imread("test1.png")
-#     result = pytesseract.image_to_string(img)
-#     print(result)
-#     for c in result:
-#         if c == "\n":
-#             c = " "
-#         pyautogui.typewrite(c, t)
+while (time.time() - start) < pause:
+    screenshot = pyautogui.screenshot(region=(450, 280, 980, 70))
+    screenshot.save("test1.png")
+    img = cv2.imread("test1.png")
+    result = pytesseract.image_to_string(img)
+    print(result)
+    for c in result:
+        if c == "\n":
+            c = " "
+        pyautogui.typewrite(c, t)
